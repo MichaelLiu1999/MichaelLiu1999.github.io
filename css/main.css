@@ -1767,7 +1767,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #a274ff;
+  background: #fc16ac;
 }
 .feed-link,
 .chat {
@@ -2483,7 +2483,7 @@ embed {
   -webkit-box-shadow: 0 0 5px rgba(202,203,203,0.5);
   -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
 }
-.body {
+body {
   background: url("/images/bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
