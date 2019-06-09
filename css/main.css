@@ -1767,7 +1767,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #14c794;
+  background: #f1a43d;
 }
 .feed-link,
 .chat {
@@ -2477,7 +2477,6 @@ embed {
   display: inline-block;
 }
 .post {
-  background: #c9c9c9;
   margin-top: 60px;
   margin-bottom: 60px;
   padding: 25px;
