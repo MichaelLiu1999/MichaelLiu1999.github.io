@@ -6,7 +6,7 @@
   <link href="/MichaelLiu1999.github.io/atom.xml" rel="self"/>
   
   <link href="https://MichaelLiu1999.github.io/"/>
-  <updated>2019-06-10T13:57:00.115Z</updated>
+  <updated>2019-06-10T14:01:21.535Z</updated>
   <id>https://MichaelLiu1999.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>字符串比配</title>
+    <title>字符串匹配</title>
     <link href="https://MichaelLiu1999.github.io/2019/06/10/stringAlgorithm/"/>
     <id>https://MichaelLiu1999.github.io/2019/06/10/stringAlgorithm/</id>
     <published>2019-06-10T13:38:24.000Z</published>
-    <updated>2019-06-10T13:57:00.115Z</updated>
+    <updated>2019-06-10T14:01:21.535Z</updated>
     
     <content type="html"><![CDATA[<h1 id="BF算法和KMP算法的比较"><a href="#BF算法和KMP算法的比较" class="headerlink" title="BF算法和KMP算法的比较"></a>BF算法和KMP算法的比较</h1><p><strong><em>给定一个字符串(text)和一个模式字符串(pattern)，查询text中是否存在pattern子串</em></strong></p><p>Brute-Force算法比较无脑，就是从text的第一个字符开始比较，失败就从第二个字符开始，以此类推。</p><p><a href="https://www.cnblogs.com/zxcjj/p/6529387.html" target="_blank" rel="noopener">BF算法详解</a></p><hr><p>Knuth-Morris-Pratt算法是的核心是尽可能多的把text的匹配字符往前移动，减少循环次数。总共分两个步骤：</p><ul><li>初始化一个与pattern字符串长度相同的int数组，根据pattern字符串的模式给其赋值，该值可以使每一次text的字符尽可能多的往前移动。</li><li>根据int数组开始进行字符串匹配</li></ul><p><a href="https://blog.csdn.net/daaikuaichuan/article/details/80719203" target="_blank" rel="noopener">KMP算法详解（我觉得写的比较让人容易看懂）</a></p>]]></content>
     
