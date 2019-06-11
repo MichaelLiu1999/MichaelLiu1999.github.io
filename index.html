@@ -793,7 +793,7 @@
                 
               
 
-              <time title="创建时间：2019-06-11 12:07:14 / 修改时间：15:48:40" itemprop="dateCreated datePublished" datetime="2019-06-11T12:07:14+08:00">2019-06-11</time>
+              <time title="创建时间：2019-06-11 12:07:14 / 修改时间：15:51:03" itemprop="dateCreated datePublished" datetime="2019-06-11T12:07:14+08:00">2019-06-11</time>
             
 
             
@@ -865,24 +865,21 @@
 <ul>
 <li>Code(Java)</li>
 </ul>
-<p>(<code>)
-    public static void insertSort(int[] array)
+<pre><code>public static void insertSort(int[] array)
+{
+    int size = array.length;
+    int temp = 0;
+    int j = 0;
+    for(int i=0; i&lt;size; i++)
     {
-        int size = array.length;
-        int temp = 0;
-        int j = 0;
-        for(int i=0; i&lt;size; i++)
+        temp = array[i];
+        for(j=i; j&gt;0 &amp;&amp; temp &lt; array[j-1]; j--)
         {
-            temp = array[i];
-            for(j=i; j&gt;0 &amp;&amp; temp &lt; array[j-1]; j--)
-            {
-                array[j] = array[j-1];
-            }
-            array[j] = temp;
+            array[j] = array[j-1];
         }
+        array[j] = temp;
     }
-(</code>)</p>
-<p>Time Complexity: O(n2)</p>
+}</code></pre><p>Time Complexity: O(n2)</p>
 <h2 id="Divide-and-Conquer-分而治之"><a href="#Divide-and-Conquer-分而治之" class="headerlink" title="Divide and Conquer(分而治之)"></a>Divide and Conquer(分而治之)</h2><ul>
 <li>将一个大型的问题分解成多个小的子问题，最后在用递归将所有子问题合并。</li>
 </ul>
@@ -895,40 +892,37 @@
 <ul>
 <li>Draw</li>
 </ul>
-<p><img src="/imgaes/quickSort" alt></p>
+<p><img src="/imgaes/quickSort.png" alt></p>
 <ul>
-<li>Code(Java)</li>
-</ul>
-<p>(<code>)
-    public static void quickSort(int[] array, _left, _right)
+<li><p>Code(Java)</p>
+<p>  public static void quickSort(int[] array, _left, _right)<br>  {</p>
+<pre><code>int left = _left;
+int right = _right;
+int temp = 0;
+if(left &lt;= right)
+{
+    //分而治之
+    //设置一个基准(base)
+    temp = array[left];
+    while(left != right)
     {
-        int left = _left;
-        int right = _right;
-        int temp = 0;
-        if(left &lt;= right)
-        {
-            //分而治之
-            //设置一个基准(base)
-            temp = array[left];
-            while(left != right)
-            {
-                //把比基准小的元素都放到左边
-                while(right &gt; left &amp;&amp; array[right] &gt;= temp)
-                    right--;
-                array[left] = array[right];
-                //把比基准大的元素都放到右边
-                while(left &lt; right &amp;&amp; array[left] &lt;= temp)
-                    left++;
-                array[right] = array[left];
-            }
-            //基准归位
-            array[right] = temp;
-            //递归
-            quickSort(array, _left, left-1); //对基准左边的元素进行递归排序
-            quickSort(array,right+1, _right); //对基准左边的元素进行递归排序
-        }
+        //把比基准小的元素都放到左边
+        while(right &gt; left &amp;&amp; array[right] &gt;= temp)
+            right--;
+        array[left] = array[right];
+        //把比基准大的元素都放到右边
+        while(left &lt; right &amp;&amp; array[left] &lt;= temp)
+            left++;
+        array[right] = array[left];
     }
-(</code>)</p>
+    //基准归位
+    array[right] = temp;
+    //递归
+    quickSort(array, _left, left-1); //对基准左边的元素进行递归排序
+    quickSort(array,right+1, _right); //对基准左边的元素进行递归排序
+}</code></pre><p>  }</p>
+</li>
+</ul>
 <p>Time complexity: It depends, unstable.</p>
 
           
