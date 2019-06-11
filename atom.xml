@@ -6,7 +6,7 @@
   <link href="/MichaelLiu1999.github.io/atom.xml" rel="self"/>
   
   <link href="https://MichaelLiu1999.github.io/"/>
-  <updated>2019-06-11T06:13:43.249Z</updated>
+  <updated>2019-06-11T06:27:48.940Z</updated>
   <id>https://MichaelLiu1999.github.io/</id>
   
   <author>
@@ -21,16 +21,15 @@
     <link href="https://MichaelLiu1999.github.io/2019/06/11/music-guitar/"/>
     <id>https://MichaelLiu1999.github.io/2019/06/11/music-guitar/</id>
     <published>2019-06-11T06:09:35.000Z</published>
-    <updated>2019-06-11T06:13:43.249Z</updated>
+    <updated>2019-06-11T06:27:48.940Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Faded"><a href="#Faded" class="headerlink" title="Faded"></a>Faded</h1><video id="video" controls preload="none">    <source id="mp4" src="/images/Guitar-faded.mp4" type="video/mp4"></video>]]></content>
+    <content type="html"><![CDATA[<h1 id="Faded"><a href="#Faded" class="headerlink" title="Faded"></a>Faded</h1><video id="video" controls preload="none" height="400" width="600">    <source id="mp4" src="/images/Guitar-faded.mp4" type="video/mp4"></video>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;Faded&quot;&gt;&lt;a href=&quot;#Faded&quot; class=&quot;headerlink&quot; title=&quot;Faded&quot;&gt;&lt;/a&gt;Faded&lt;/h1&gt;&lt;video id=&quot;video&quot; controls preload=&quot;none&quot;&gt;
-    &lt;source id=&quot;mp
+        &lt;h1 id=&quot;Faded&quot;&gt;&lt;a href=&quot;#Faded&quot; class=&quot;headerlink&quot; title=&quot;Faded&quot;&gt;&lt;/a&gt;Faded&lt;/h1&gt;&lt;video id=&quot;video&quot; controls preload=&quot;none&quot; height=&quot;400&quot; width=
       
     
     </summary>
