@@ -793,7 +793,7 @@
                 
               
 
-              <time title="创建时间：2019-06-11 12:07:14 / 修改时间：12:29:55" itemprop="dateCreated datePublished" datetime="2019-06-11T12:07:14+08:00">2019-06-11</time>
+              <time title="创建时间：2019-06-11 12:07:14 / 修改时间：15:48:40" itemprop="dateCreated datePublished" datetime="2019-06-11T12:07:14+08:00">2019-06-11</time>
             
 
             
@@ -857,7 +857,7 @@
 <h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><ul>
 <li>原理</li>
 </ul>
-<p>简单插入排序算法原理：从整个待排序列中选出一个元素插入到已经有序的子序列中去，得到一个有序的、元素加一的子序列，直到整个序列的待插入元素为0，则整个序列全部有序。<br>在实际的算法中，我们经常选择序列的第一个元素作为有序序列（因为一个元素肯定是有序的），我们逐渐将后面的元素插入到前面的有序序列中，直到整个序列有序。</p>
+<p>从整个待排序列中选出一个元素插入到已经有序的子序列中去，得到一个有序的、元素加一的子序列，直到整个序列的待插入元素为0，则整个序列全部有序。<br>在实际的算法中，我们经常选择序列的第一个元素作为有序序列（因为一个元素肯定是有序的），我们逐渐将后面的元素插入到前面的有序序列中，直到整个序列有序。</p>
 <ul>
 <li>Draw</li>
 </ul>
@@ -883,6 +883,53 @@
     }
 (</code>)</p>
 <p>Time Complexity: O(n2)</p>
+<h2 id="Divide-and-Conquer-分而治之"><a href="#Divide-and-Conquer-分而治之" class="headerlink" title="Divide and Conquer(分而治之)"></a>Divide and Conquer(分而治之)</h2><ul>
+<li>将一个大型的问题分解成多个小的子问题，最后在用递归将所有子问题合并。</li>
+</ul>
+<h2 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h2><ul>
+<li>原理</li>
+</ul>
+<p>1.在待排序的元素任取一个元素作为基准(通常选第一个元素，但最的选择方法是从待排序元素中随机选取一个作为基准)，称为基准元素；</p>
+<p>2.将待排序的元素进行分区，比基准元素大的元素放在它的右边，比其小的放在它的左边；</p>
+<p>3.对左右两个分区重复以上步骤直到所有元素都是有序的。</p>
+<ul>
+<li>Draw</li>
+</ul>
+<p><img src="/imgaes/quickSort" alt></p>
+<ul>
+<li>Code(Java)</li>
+</ul>
+<p>(<code>)
+    public static void quickSort(int[] array, _left, _right)
+    {
+        int left = _left;
+        int right = _right;
+        int temp = 0;
+        if(left &lt;= right)
+        {
+            //分而治之
+            //设置一个基准(base)
+            temp = array[left];
+            while(left != right)
+            {
+                //把比基准小的元素都放到左边
+                while(right &gt; left &amp;&amp; array[right] &gt;= temp)
+                    right--;
+                array[left] = array[right];
+                //把比基准大的元素都放到右边
+                while(left &lt; right &amp;&amp; array[left] &lt;= temp)
+                    left++;
+                array[right] = array[left];
+            }
+            //基准归位
+            array[right] = temp;
+            //递归
+            quickSort(array, _left, left-1); //对基准左边的元素进行递归排序
+            quickSort(array,right+1, _right); //对基准左边的元素进行递归排序
+        }
+    }
+(</code>)</p>
+<p>Time complexity: It depends, unstable.</p>
 
           
         
