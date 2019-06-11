@@ -6,7 +6,7 @@
   <link href="/MichaelLiu1999.github.io/atom.xml" rel="self"/>
   
   <link href="https://MichaelLiu1999.github.io/"/>
-  <updated>2019-06-11T02:23:15.241Z</updated>
+  <updated>2019-06-11T02:24:44.039Z</updated>
   <id>https://MichaelLiu1999.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://MichaelLiu1999.github.io/2019/06/11/timeComplexity/"/>
     <id>https://MichaelLiu1999.github.io/2019/06/11/timeComplexity/</id>
     <published>2019-06-11T01:51:01.000Z</published>
-    <updated>2019-06-11T02:23:15.241Z</updated>
+    <updated>2019-06-11T02:24:44.039Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="时间复杂度的三种表示方法"><a href="#时间复杂度的三种表示方法" class="headerlink" title="时间复杂度的三种表示方法"></a>时间复杂度的三种表示方法</h1><p><em>Ο Ω Θ表示法，in-place algorithm, pre-condition, post-condition</em></p><img src="/images/bg-1.jpg" width="200" height="200" div align="center"><h2 id="Ο-Ω-Θ表示法"><a href="#Ο-Ω-Θ表示法" class="headerlink" title="Ο Ω Θ表示法"></a>Ο Ω Θ表示法</h2><ul><li><p>大Ο表示法（上界）</p><p>  f(n) ∈ O(g(n)) if there exists constants c &gt; 0 and n0 &gt; 0,</p><pre><code>such thatf(n) ≤ c.g(n)  for all  n &gt; n0 </code></pre></li></ul><ul><li><p>大Ω表示法（下界）</p><p>  f(n) ∈ Ω(g(n)) if there exists constants c &gt; 0 and n0 &gt; 0,</p><pre><code>such that     f(n) ≥ c·g(n)  for all  n &gt; n0 </code></pre></li></ul><ul><li>大Θ表示法（确界）<br>  f(n) ∈ Θ(g(n)) if there exists constants c1 &gt; 0, c2 &gt; 0 and n0 &gt; 0, <pre><code>such that    c2·g(n) ≤ f(n) ≤ c1·g(n)  for all  n &gt; n0 </code></pre></li></ul><p><img src="/images/timeComplexity.png" alt="两个算法的时间复杂度比较"></p><hr><h2 id="in-place-algorithm"><a href="#in-place-algorithm" class="headerlink" title="in-place algorithm"></a>in-place algorithm</h2><p>如果输入数据有一个自然的形式（比如，一个数组或矩阵），则我们撇开程序和输入，<br>分析还需要多少额外的空间。如果额外空间的大小是一个于输入规模有关的常量，则这样的<br>算法称为 in place</p><hr><h2 id="pre-condition-post-condition"><a href="#pre-condition-post-condition" class="headerlink" title="pre-condition, post-condition"></a>pre-condition, post-condition</h2><ul><li><p>pre-condition<br>The pre-condition indicates what must be true before the function is called.</p></li><li><p>post-condition<br>The post-condition indicates what will be true when the function finishes its work.</p></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="时间复杂度的三种表示方法"><a href="#时间复杂度的三种表示方法" class="headerlink" title="时间复杂度的三种表示方法"></a>时间复杂度的三种表示方法</h1><p><em>Ο Ω Θ表示法，in-place algorithm, pre-condition, post-condition</em></p><img src="/images/bg-1.jpg" width="400" height="400" div align="center"><h2 id="Ο-Ω-Θ表示法"><a href="#Ο-Ω-Θ表示法" class="headerlink" title="Ο Ω Θ表示法"></a>Ο Ω Θ表示法</h2><ul><li><p>大Ο表示法（上界）</p><p>  f(n) ∈ O(g(n)) if there exists constants c &gt; 0 and n0 &gt; 0,</p><pre><code>such thatf(n) ≤ c.g(n)  for all  n &gt; n0 </code></pre></li></ul><ul><li><p>大Ω表示法（下界）</p><p>  f(n) ∈ Ω(g(n)) if there exists constants c &gt; 0 and n0 &gt; 0,</p><pre><code>such that     f(n) ≥ c·g(n)  for all  n &gt; n0 </code></pre></li></ul><ul><li>大Θ表示法（确界）<br>  f(n) ∈ Θ(g(n)) if there exists constants c1 &gt; 0, c2 &gt; 0 and n0 &gt; 0, <pre><code>such that    c2·g(n) ≤ f(n) ≤ c1·g(n)  for all  n &gt; n0 </code></pre></li></ul><p><img src="/images/timeComplexity.png" alt="两个算法的时间复杂度比较"></p><hr><h2 id="in-place-algorithm"><a href="#in-place-algorithm" class="headerlink" title="in-place algorithm"></a>in-place algorithm</h2><p>如果输入数据有一个自然的形式（比如，一个数组或矩阵），则我们撇开程序和输入，<br>分析还需要多少额外的空间。如果额外空间的大小是一个于输入规模有关的常量，则这样的<br>算法称为 in place</p><hr><h2 id="pre-condition-post-condition"><a href="#pre-condition-post-condition" class="headerlink" title="pre-condition, post-condition"></a>pre-condition, post-condition</h2><ul><li><p>pre-condition<br>The pre-condition indicates what must be true before the function is called.</p></li><li><p>post-condition<br>The post-condition indicates what will be true when the function finishes its work.</p></li></ul>]]></content>
     
     <summary type="html">
     
