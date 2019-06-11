@@ -582,6 +582,196 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://MichaelLiu1999.github.io/MichaelLiu1999.github.io/2019/06/11/timeComplexity/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Leo">
+      <meta itemprop="description" content="码农 伪文艺青年 技术宅 政治正确">
+      <meta itemprop="image" content="/MichaelLiu1999.github.io/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="想要上树的小猪">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/MichaelLiu1999.github.io/2019/06/11/timeComplexity/" class="post-title-link" itemprop="url">算法的时间复杂度分析</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          
+
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-06-11 09:51:01 / 修改时间：10:12:08" itemprop="dateCreated datePublished" datetime="2019-06-11T09:51:01+08:00">2019-06-11</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/MichaelLiu1999.github.io/categories/major/" itemprop="url" rel="index"><span itemprop="name">major</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="时间复杂度的三种表示方法"><a href="#时间复杂度的三种表示方法" class="headerlink" title="时间复杂度的三种表示方法"></a>时间复杂度的三种表示方法</h1><p><em>Ο Ω Θ表示法，in-place algorithm, pre-condition, post-condition</em></p>
+<p><img src="/images/bg-1.jpg" alt></p>
+<h2 id="Ο-Ω-Θ表示法"><a href="#Ο-Ω-Θ表示法" class="headerlink" title="Ο Ω Θ表示法"></a>Ο Ω Θ表示法</h2><ul>
+<li><p>大Ο表示法（上界）</p>
+<p>  f(n) ∈ O(g(n)) if there exists constants c &gt; 0 and n0 &gt; 0,</p>
+<pre><code>such that
+f(n) ≤ c.g(n)  for all  n &gt; n0 </code></pre></li>
+</ul>
+<ul>
+<li><p>大Ω表示法（下界）</p>
+<p>  f(n) ∈ Ω(g(n)) if there exists constants c &gt; 0 and n0 &gt; 0,</p>
+<pre><code>such that
+     f(n) ≥ c·g(n)  for all  n &gt; n0 </code></pre></li>
+</ul>
+<ul>
+<li>大Θ表示法（确界）<br>  f(n) ∈ Θ(g(n)) if there exists constants c1 &gt; 0, c2 &gt; 0 and n0 &gt; 0, <pre><code>such that
+    c2·g(n) ≤ f(n) ≤ c1·g(n)  for all  n &gt; n0 </code></pre></li>
+</ul>
+<p><img src="/images/timeComplexity.png" alt="两个算法的时间复杂度比较"></p>
+<hr>
+<h2 id="in-place-algorithm"><a href="#in-place-algorithm" class="headerlink" title="in-place algorithm"></a>in-place algorithm</h2><p>如果输入数据有一个自然的形式（比如，一个数组或矩阵），则我们撇开程序和输入，<br>分析还需要多少额外的空间。如果额外空间的大小是一个于输入规模有关的常量，则这样的<br>算法称为 in place</p>
+<hr>
+<h2 id="pre-condition-post-condition"><a href="#pre-condition-post-condition" class="headerlink" title="pre-condition, post-condition"></a>pre-condition, post-condition</h2><ul>
+<li><p>pre-condition<br>The pre-condition indicates what must be true before the function is called.</p>
+</li>
+<li><p>post-condition<br>The post-condition indicates what will be true when the function finishes its work.</p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://MichaelLiu1999.github.io/MichaelLiu1999.github.io/2019/06/10/stringAlgorithm/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -629,7 +819,7 @@
                 
               
 
-              <time title="创建时间：2019-06-10 21:38:24 / 修改时间：22:01:21" itemprop="dateCreated datePublished" datetime="2019-06-10T21:38:24+08:00">2019-06-10</time>
+              <time title="创建时间：2019-06-10 21:38:24 / 修改时间：22:01:58" itemprop="dateCreated datePublished" datetime="2019-06-10T21:38:24+08:00">2019-06-10</time>
             
 
             
@@ -1290,7 +1480,7 @@
                 
                   <a href="/MichaelLiu1999.github.io/archives/">
                 
-                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>

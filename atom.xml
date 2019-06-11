@@ -6,7 +6,7 @@
   <link href="/MichaelLiu1999.github.io/atom.xml" rel="self"/>
   
   <link href="https://MichaelLiu1999.github.io/"/>
-  <updated>2019-06-10T14:01:21.535Z</updated>
+  <updated>2019-06-11T02:12:08.838Z</updated>
   <id>https://MichaelLiu1999.github.io/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>算法的时间复杂度分析</title>
+    <link href="https://MichaelLiu1999.github.io/2019/06/11/timeComplexity/"/>
+    <id>https://MichaelLiu1999.github.io/2019/06/11/timeComplexity/</id>
+    <published>2019-06-11T01:51:01.000Z</published>
+    <updated>2019-06-11T02:12:08.838Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="时间复杂度的三种表示方法"><a href="#时间复杂度的三种表示方法" class="headerlink" title="时间复杂度的三种表示方法"></a>时间复杂度的三种表示方法</h1><p><em>Ο Ω Θ表示法，in-place algorithm, pre-condition, post-condition</em></p><p><img src="/images/bg-1.jpg" alt></p><h2 id="Ο-Ω-Θ表示法"><a href="#Ο-Ω-Θ表示法" class="headerlink" title="Ο Ω Θ表示法"></a>Ο Ω Θ表示法</h2><ul><li><p>大Ο表示法（上界）</p><p>  f(n) ∈ O(g(n)) if there exists constants c &gt; 0 and n0 &gt; 0,</p><pre><code>such thatf(n) ≤ c.g(n)  for all  n &gt; n0 </code></pre></li></ul><ul><li><p>大Ω表示法（下界）</p><p>  f(n) ∈ Ω(g(n)) if there exists constants c &gt; 0 and n0 &gt; 0,</p><pre><code>such that     f(n) ≥ c·g(n)  for all  n &gt; n0 </code></pre></li></ul><ul><li>大Θ表示法（确界）<br>  f(n) ∈ Θ(g(n)) if there exists constants c1 &gt; 0, c2 &gt; 0 and n0 &gt; 0, <pre><code>such that    c2·g(n) ≤ f(n) ≤ c1·g(n)  for all  n &gt; n0 </code></pre></li></ul><p><img src="/images/timeComplexity.png" alt="两个算法的时间复杂度比较"></p><hr><h2 id="in-place-algorithm"><a href="#in-place-algorithm" class="headerlink" title="in-place algorithm"></a>in-place algorithm</h2><p>如果输入数据有一个自然的形式（比如，一个数组或矩阵），则我们撇开程序和输入，<br>分析还需要多少额外的空间。如果额外空间的大小是一个于输入规模有关的常量，则这样的<br>算法称为 in place</p><hr><h2 id="pre-condition-post-condition"><a href="#pre-condition-post-condition" class="headerlink" title="pre-condition, post-condition"></a>pre-condition, post-condition</h2><ul><li><p>pre-condition<br>The pre-condition indicates what must be true before the function is called.</p></li><li><p>post-condition<br>The post-condition indicates what will be true when the function finishes its work.</p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;时间复杂度的三种表示方法&quot;&gt;&lt;a href=&quot;#时间复杂度的三种表示方法&quot; class=&quot;headerlink&quot; title=&quot;时间复杂度的三种表示方法&quot;&gt;&lt;/a&gt;时间复杂度的三种表示方法&lt;/h1&gt;&lt;p&gt;&lt;em&gt;Ο Ω Θ表示法，in-place algorith
+      
+    
+    </summary>
+    
+      <category term="major" scheme="https://MichaelLiu1999.github.io/categories/major/"/>
+    
+    
+      <category term="算法分析" scheme="https://MichaelLiu1999.github.io/tags/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90/"/>
+    
+  </entry>
+  
+  <entry>
     <title>字符串匹配</title>
     <link href="https://MichaelLiu1999.github.io/2019/06/10/stringAlgorithm/"/>
     <id>https://MichaelLiu1999.github.io/2019/06/10/stringAlgorithm/</id>
     <published>2019-06-10T13:38:24.000Z</published>
-    <updated>2019-06-10T14:01:21.535Z</updated>
+    <updated>2019-06-10T14:01:58.647Z</updated>
     
     <content type="html"><![CDATA[<h1 id="BF算法和KMP算法的比较"><a href="#BF算法和KMP算法的比较" class="headerlink" title="BF算法和KMP算法的比较"></a>BF算法和KMP算法的比较</h1><p><strong><em>给定一个字符串(text)和一个模式字符串(pattern)，查询text中是否存在pattern子串</em></strong></p><p>Brute-Force算法比较无脑，就是从text的第一个字符开始比较，失败就从第二个字符开始，以此类推。</p><p><a href="https://www.cnblogs.com/zxcjj/p/6529387.html" target="_blank" rel="noopener">BF算法详解</a></p><hr><p>Knuth-Morris-Pratt算法是的核心是尽可能多的把text的匹配字符往前移动，减少循环次数。总共分两个步骤：</p><ul><li>初始化一个与pattern字符串长度相同的int数组，根据pattern字符串的模式给其赋值，该值可以使每一次text的字符尽可能多的往前移动。</li><li>根据int数组开始进行字符串匹配</li></ul><p><a href="https://blog.csdn.net/daaikuaichuan/article/details/80719203" target="_blank" rel="noopener">KMP算法详解（我觉得写的比较让人容易看懂）</a></p>]]></content>
     
