@@ -6,7 +6,7 @@
   <link href="/MichaelLiu1999.github.io/atom.xml" rel="self"/>
   
   <link href="https://MichaelLiu1999.github.io/"/>
-  <updated>2019-06-13T14:14:36.217Z</updated>
+  <updated>2019-06-13T14:19:09.674Z</updated>
   <id>https://MichaelLiu1999.github.io/</id>
   
   <author>
@@ -21,16 +21,18 @@
     <link href="https://MichaelLiu1999.github.io/2019/06/13/sortAlgorithm-3/"/>
     <id>https://MichaelLiu1999.github.io/2019/06/13/sortAlgorithm-3/</id>
     <published>2019-06-13T09:43:21.000Z</published>
-    <updated>2019-06-13T14:14:36.217Z</updated>
+    <updated>2019-06-13T14:19:09.674Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="排序算法分析-3"><a href="#排序算法分析-3" class="headerlink" title="排序算法分析-3"></a>排序算法分析-3</h1><h2 id="基数排序-Radix-sort"><a href="#基数排序-Radix-sort" class="headerlink" title="基数排序(Radix sort)"></a>基数排序(Radix sort)</h2><img src="/images/bg-4.jpg" width="400" height="400" div align="center"><ul><li>原理</li></ul><p>将所有待比较数值统一为同样的数位长度，数位较短的数前面补零。然后，从最低位开始，依次进行一次排序。这样从最低位排序一直到最高位排序完成以后, 数列就变成一个有序序列。</p><ul><li>Java源代码</li></ul><pre><code>private static void countSort(int[] a, int exp){    int[] output = new int[a.length]; //储存已经排好序的临时数组    int[] buckets = new int[10];    //将数据出现的次数储存在buckets[]中    for(int i=0; i &lt; a.length; i++)    {        buckets[ (a[i]/exp)%10 ]++;    }    //更改buckets[i],使值为当前总共又多少个数据，用于排序    for(int i=1; i&lt;10; i++)    {        buckets[i] += buckets[i-1];    }    //将数据储存到临时数组output[]中    for(int i = a.length - 1; i&gt;=0; i--)    {        output[ buckets[ (a[i]/exp)%10 ] - 1 ] = a[i];        buckets[ (a[i]/exp)%10 ]--;    }    //将排好的数据赋值给a[]    for(int i=0; i &lt; a.length; i++)    {        a[i] = output[i];    }    output = null;    buckets = null;}public static void radixSort(int[] a){    int exp; //指数，当对数组按个位进行排序时，exp=1; 按十位进行排序时，exp=10……    int max = getMax(a);  //数组a中的最大值    //从个位开始，对数组a按&quot;指数&quot;进行排序    for(exp = 1; (max/exp) &gt; 0; exp * = 10)    {        countSort(a, exp)    }}private static int getMax(int[] a){    int max;    max = a[0];    for(int i=1; i &lt; a.length; i++)    {        if(a[i] &gt; max)        {            max = a[i];        }    }    return max;}</code></pre><ul><li>算法分析</li></ul><p>时间复杂度:O(n)<br>空间复杂度:O(n)</p><p><a href="https://www.cnblogs.com/skywang12345/p/3603669.html" target="_blank" rel="noopener">这篇文章的基数排序讲的非常详细</a></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="排序算法分析-3"><a href="#排序算法分析-3" class="headerlink" title="排序算法分析-3"></a>排序算法分析-3</h1><h2 id="基数排序-Radix-sort"><a href="#基数排序-Radix-sort" class="headerlink" title="基数排序(Radix sort)"></a>基数排序(Radix sort)</h2><img src="/images/bg-4.jpg" width="400" height="400" div align="center"><ul><li>原理</li></ul><p>将所有待比较数值统一为同样的数位长度，数位较短的数前面补零。然后，从最低位开始，依次进行一次排序。这样从最低位排序一直到最高位排序完成以后, 数列就变成一个有序序列。</p><a id="more"></a><ul><li>Java源代码</li></ul><pre><code>private static void countSort(int[] a, int exp){    int[] output = new int[a.length]; //储存已经排好序的临时数组    int[] buckets = new int[10];    //将数据出现的次数储存在buckets[]中    for(int i=0; i &lt; a.length; i++)    {        buckets[ (a[i]/exp)%10 ]++;    }    //更改buckets[i],使值为当前总共又多少个数据，用于排序    for(int i=1; i&lt;10; i++)    {        buckets[i] += buckets[i-1];    }    //将数据储存到临时数组output[]中    for(int i = a.length - 1; i&gt;=0; i--)    {        output[ buckets[ (a[i]/exp)%10 ] - 1 ] = a[i];        buckets[ (a[i]/exp)%10 ]--;    }    //将排好的数据赋值给a[]    for(int i=0; i &lt; a.length; i++)    {        a[i] = output[i];    }    output = null;    buckets = null;}public static void radixSort(int[] a){    int exp; //指数，当对数组按个位进行排序时，exp=1; 按十位进行排序时，exp=10……    int max = getMax(a);  //数组a中的最大值    //从个位开始，对数组a按&quot;指数&quot;进行排序    for(exp = 1; (max/exp) &gt; 0; exp * = 10)    {        countSort(a, exp)    }}private static int getMax(int[] a){    int max;    max = a[0];    for(int i=1; i &lt; a.length; i++)    {        if(a[i] &gt; max)        {            max = a[i];        }    }    return max;}</code></pre><ul><li>算法分析</li></ul><p>时间复杂度:O(n)<br>空间复杂度:O(n)</p><p><a href="https://www.cnblogs.com/skywang12345/p/3603669.html" target="_blank" rel="noopener">这篇文章的基数排序讲的非常详细</a></p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;h1 id=&quot;排序算法分析-3&quot;&gt;&lt;a href=&quot;#排序算法分析-3&quot; class=&quot;headerlink&quot; title=&quot;排序算法分析-3&quot;&gt;&lt;/a&gt;排序算法分析-3&lt;/h1&gt;&lt;h2 id=&quot;基数排序-Radix-sort&quot;&gt;&lt;a href=&quot;#基数排序-Radix-sor
-      
+      &lt;h1 id=&quot;排序算法分析-3&quot;&gt;&lt;a href=&quot;#排序算法分析-3&quot; class=&quot;headerlink&quot; title=&quot;排序算法分析-3&quot;&gt;&lt;/a&gt;排序算法分析-3&lt;/h1&gt;&lt;h2 id=&quot;基数排序-Radix-sort&quot;&gt;&lt;a href=&quot;#基数排序-Radix-sort&quot; class=&quot;headerlink&quot; title=&quot;基数排序(Radix sort)&quot;&gt;&lt;/a&gt;基数排序(Radix sort)&lt;/h2&gt;&lt;img src=&quot;/images/bg-4.jpg&quot; width=&quot;400&quot; height=&quot;400&quot; div align=&quot;center&quot;&gt;
+
+&lt;ul&gt;
+&lt;li&gt;原理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;将所有待比较数值统一为同样的数位长度，数位较短的数前面补零。然后，从最低位开始，依次进行一次排序。这样从最低位排序一直到最高位排序完成以后, 数列就变成一个有序序列。&lt;/p&gt;
     
     </summary>
     
