@@ -6,7 +6,7 @@
   <link href="/MichaelLiu1999.github.io/atom.xml" rel="self"/>
   
   <link href="https://MichaelLiu1999.github.io/"/>
-  <updated>2019-06-13T08:27:54.991Z</updated>
+  <updated>2019-06-13T08:28:49.246Z</updated>
   <id>https://MichaelLiu1999.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://MichaelLiu1999.github.io/2019/06/13/sortingAlgorithm-2/"/>
     <id>https://MichaelLiu1999.github.io/2019/06/13/sortingAlgorithm-2/</id>
     <published>2019-06-13T07:29:18.000Z</published>
-    <updated>2019-06-13T08:27:54.991Z</updated>
+    <updated>2019-06-13T08:28:49.246Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="排序算法分析-2"><a href="#排序算法分析-2" class="headerlink" title="排序算法分析-2"></a>排序算法分析-2</h1><h2 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h2><ul><li>原理</li></ul><p>堆是具有以下性质的完全二叉树：每个结点的值都大于或等于其左右孩子结点的值，称为大顶堆；或者每个结点的值都小于或等于其左右孩子结点的值，称为小顶堆。</p><p>这里的堆排序用到的是大顶堆</p><ul><li>步骤</li></ul><p>1.将无需序列构建成一个堆，根据升序降序需求选择大顶堆或小顶堆;<br>2.将堆顶元素与末尾元素交换，将最大元素”沉”到数组末端;<br>3.重新调整结构，使其满足堆定义，然后继续交换堆顶元素与当前末尾元素，反复执行调整+交换步骤，直到整个序列有序。</p><ul><li><p>Java源码实现</p><p>  public static void sort(int[] arr)<br>  {</p><pre><code>//构建大顶堆for(int i = arr.length/2-1; i&gt;=0; i++){    //从最后一个非叶节点之下而上，从右至左开始调整    adjustHeap(arr, i, arr.length);}//调整堆结构+交换堆顶元素和末尾元素for(int j = arr.length-1; j&gt;0; j--){    swap(arr, 0, j);    adjustHeap(arr, 0, j);}</code></pre><p>  }<br>  //调整大顶堆<br>  public static void adjustHeap(int[] arr, int i; int length)<br>  {</p><pre><code>int temp = arr[i];//先取出当前元素ifor(int k = 2*i+1; k &lt; length; k = k*2+1) //从i的左子节点开始{    if( (k+1) &lt; length &amp;&amp; arr[k] &lt; arr[k+1] ) //如果左子节点小于右子节点，把k指向右子节点    {        k++;    }    if(temp &lt; arr[k]) //如果父节点小于子节点    {        arr[i] = arr[k];        i = k;    }else    {        break;    }}arr[i] = temp;</code></pre><p>  }<br>  //交换值<br>  public static void swap(int[] arr, int a, int b)<br>  {</p><pre><code>int temp = arr[a];arr[a] = arr[b];arr[b] = temp;</code></pre><p>  }</p></li><li><p>动画</p></li></ul><iframe src="/images/heapSort.gif"></iframe>]]></content>
+    <content type="html"><![CDATA[<h1 id="排序算法分析-2"><a href="#排序算法分析-2" class="headerlink" title="排序算法分析-2"></a>排序算法分析-2</h1><h2 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h2><ul><li>原理</li></ul><p>堆是具有以下性质的完全二叉树：每个结点的值都大于或等于其左右孩子结点的值，称为大顶堆；或者每个结点的值都小于或等于其左右孩子结点的值，称为小顶堆。</p><p>这里的堆排序用到的是大顶堆</p><ul><li>步骤</li></ul><p>1.将无需序列构建成一个堆，根据升序降序需求选择大顶堆或小顶堆;<br>2.将堆顶元素与末尾元素交换，将最大元素”沉”到数组末端;<br>3.重新调整结构，使其满足堆定义，然后继续交换堆顶元素与当前末尾元素，反复执行调整+交换步骤，直到整个序列有序。</p><ul><li>Java源码实现</li></ul><pre><code>public static void sort(int[] arr){    //构建大顶堆    for(int i = arr.length/2-1; i&gt;=0; i++)    {        //从最后一个非叶节点之下而上，从右至左开始调整        adjustHeap(arr, i, arr.length);    }    //调整堆结构+交换堆顶元素和末尾元素    for(int j = arr.length-1; j&gt;0; j--)    {        swap(arr, 0, j);        adjustHeap(arr, 0, j);    }}//调整大顶堆public static void adjustHeap(int[] arr, int i; int length){    int temp = arr[i];//先取出当前元素i    for(int k = 2*i+1; k &lt; length; k = k*2+1) //从i的左子节点开始    {        if( (k+1) &lt; length &amp;&amp; arr[k] &lt; arr[k+1] ) //如果左子节点小于右子节点，把k指向右子节点        {            k++;        }        if(temp &lt; arr[k]) //如果父节点小于子节点        {            arr[i] = arr[k];            i = k;        }else        {            break;        }    }    arr[i] = temp;}//交换值public static void swap(int[] arr, int a, int b){    int temp = arr[a];    arr[a] = arr[b];    arr[b] = temp;}</code></pre><ul><li>动画</li></ul><iframe src="/images/heapSort.gif"></iframe>]]></content>
     
     <summary type="html">
     

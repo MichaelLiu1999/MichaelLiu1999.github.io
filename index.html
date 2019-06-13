@@ -629,7 +629,7 @@
                 
               
 
-              <time title="创建时间：2019-06-13 15:29:18 / 修改时间：16:27:54" itemprop="dateCreated datePublished" datetime="2019-06-13T15:29:18+08:00">2019-06-13</time>
+              <time title="创建时间：2019-06-13 15:29:18 / 修改时间：16:28:49" itemprop="dateCreated datePublished" datetime="2019-06-13T15:29:18+08:00">2019-06-13</time>
             
 
             
@@ -698,43 +698,52 @@
 </ul>
 <p>1.将无需序列构建成一个堆，根据升序降序需求选择大顶堆或小顶堆;<br>2.将堆顶元素与末尾元素交换，将最大元素”沉”到数组末端;<br>3.重新调整结构，使其满足堆定义，然后继续交换堆顶元素与当前末尾元素，反复执行调整+交换步骤，直到整个序列有序。</p>
 <ul>
-<li><p>Java源码实现</p>
-<p>  public static void sort(int[] arr)<br>  {</p>
-<pre><code>//构建大顶堆
-for(int i = arr.length/2-1; i&gt;=0; i++)
+<li>Java源码实现</li>
+</ul>
+<pre><code>public static void sort(int[] arr)
 {
-    //从最后一个非叶节点之下而上，从右至左开始调整
-    adjustHeap(arr, i, arr.length);
-}
-//调整堆结构+交换堆顶元素和末尾元素
-for(int j = arr.length-1; j&gt;0; j--)
-{
-    swap(arr, 0, j);
-    adjustHeap(arr, 0, j);
-}</code></pre><p>  }<br>  //调整大顶堆<br>  public static void adjustHeap(int[] arr, int i; int length)<br>  {</p>
-<pre><code>int temp = arr[i];//先取出当前元素i
-for(int k = 2*i+1; k &lt; length; k = k*2+1) //从i的左子节点开始
-{
-    if( (k+1) &lt; length &amp;&amp; arr[k] &lt; arr[k+1] ) //如果左子节点小于右子节点，把k指向右子节点
+    //构建大顶堆
+    for(int i = arr.length/2-1; i&gt;=0; i++)
     {
-        k++;
+        //从最后一个非叶节点之下而上，从右至左开始调整
+        adjustHeap(arr, i, arr.length);
     }
-    if(temp &lt; arr[k]) //如果父节点小于子节点
+    //调整堆结构+交换堆顶元素和末尾元素
+    for(int j = arr.length-1; j&gt;0; j--)
     {
-        arr[i] = arr[k];
-        i = k;
-    }else
-    {
-        break;
+        swap(arr, 0, j);
+        adjustHeap(arr, 0, j);
     }
 }
-arr[i] = temp;</code></pre><p>  }<br>  //交换值<br>  public static void swap(int[] arr, int a, int b)<br>  {</p>
-<pre><code>int temp = arr[a];
-arr[a] = arr[b];
-arr[b] = temp;</code></pre><p>  }</p>
-</li>
-<li><p>动画</p>
-</li>
+//调整大顶堆
+public static void adjustHeap(int[] arr, int i; int length)
+{
+    int temp = arr[i];//先取出当前元素i
+    for(int k = 2*i+1; k &lt; length; k = k*2+1) //从i的左子节点开始
+    {
+        if( (k+1) &lt; length &amp;&amp; arr[k] &lt; arr[k+1] ) //如果左子节点小于右子节点，把k指向右子节点
+        {
+            k++;
+        }
+        if(temp &lt; arr[k]) //如果父节点小于子节点
+        {
+            arr[i] = arr[k];
+            i = k;
+        }else
+        {
+            break;
+        }
+    }
+    arr[i] = temp;
+}
+//交换值
+public static void swap(int[] arr, int a, int b)
+{
+    int temp = arr[a];
+    arr[a] = arr[b];
+    arr[b] = temp;
+}</code></pre><ul>
+<li>动画</li>
 </ul>
 <iframe src="/images/heapSort.gif">
 </iframe>
