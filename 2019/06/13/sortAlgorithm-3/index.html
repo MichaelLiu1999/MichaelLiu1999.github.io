@@ -113,17 +113,20 @@
 
 
 
-  <meta name="description" content="码农 伪文艺青年 技术宅 政治正确">
-<meta property="og:type" content="website">
-<meta property="og:title" content="music">
-<meta property="og:url" content="https://MichaelLiu1999.github.io/music/index.html">
+  <meta name="description" content="排序算法分析-3基数排序(Radix sort)   原理  将所有待比较数值统一为同样的数位长度，数位较短的数前面补零。然后，从最低位开始，依次进行一次排序。这样从最低位排序一直到最高位排序完成以后, 数列就变成一个有序序列。  Java源代码  private static void countSort(int[] a, int exp) {     int[] output = new in">
+<meta name="keywords" content="算法分析">
+<meta property="og:type" content="article">
+<meta property="og:title" content="排序算法分析-3">
+<meta property="og:url" content="https://MichaelLiu1999.github.io/2019/06/13/sortAlgorithm-3/index.html">
 <meta property="og:site_name" content="想要上树的小猪">
-<meta property="og:description" content="码农 伪文艺青年 技术宅 政治正确">
+<meta property="og:description" content="排序算法分析-3基数排序(Radix sort)   原理  将所有待比较数值统一为同样的数位长度，数位较短的数前面补零。然后，从最低位开始，依次进行一次排序。这样从最低位排序一直到最高位排序完成以后, 数列就变成一个有序序列。  Java源代码  private static void countSort(int[] a, int exp) {     int[] output = new in">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-08T13:39:33.155Z">
+<meta property="og:image" content="https://michaelliu1999.github.io/images/bg-4.jpg">
+<meta property="og:updated_time" content="2019-06-13T14:05:39.759Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="music">
-<meta name="twitter:description" content="码农 伪文艺青年 技术宅 政治正确">
+<meta name="twitter:title" content="排序算法分析-3">
+<meta name="twitter:description" content="排序算法分析-3基数排序(Radix sort)   原理  将所有待比较数值统一为同样的数位长度，数位较短的数前面补零。然后，从最低位开始，依次进行一次排序。这样从最低位排序一直到最高位排序完成以后, 数列就变成一个有序序列。  Java源代码  private static void countSort(int[] a, int exp) {     int[] output = new in">
+<meta name="twitter:image" content="https://michaelliu1999.github.io/images/bg-4.jpg">
 
 
 
@@ -133,7 +136,7 @@
 
   
   
-  <link rel="canonical" href="https://MichaelLiu1999.github.io/music/">
+  <link rel="canonical" href="https://MichaelLiu1999.github.io/2019/06/13/sortAlgorithm-3/">
 
 
 
@@ -143,7 +146,7 @@
   };
 </script>
 
-  <title>music | 想要上树的小猪</title>
+  <title>排序算法分析-3 | 想要上树的小猪</title>
   
 
 
@@ -379,79 +382,260 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://MichaelLiu1999.github.io/MichaelLiu1999.github.io/2019/06/13/sortAlgorithm-3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Leo">
+      <meta itemprop="description" content="码农 伪文艺青年 技术宅 政治正确">
+      <meta itemprop="image" content="/MichaelLiu1999.github.io/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="想要上树的小猪">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">music
-
-</h1>
-
-<div class="post-meta">
-  
-  
-
-
-
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
+        
+          <h1 class="post-title" itemprop="name headline">排序算法分析-3
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          
+
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-06-13 17:43:21 / 修改时间：22:05:39" itemprop="dateCreated datePublished" datetime="2019-06-13T17:43:21+08:00">2019-06-13</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/MichaelLiu1999.github.io/categories/major/" itemprop="url" rel="index"><span itemprop="name">major</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="排序算法分析-3"><a href="#排序算法分析-3" class="headerlink" title="排序算法分析-3"></a>排序算法分析-3</h1><h2 id="基数排序-Radix-sort"><a href="#基数排序-Radix-sort" class="headerlink" title="基数排序(Radix sort)"></a>基数排序(Radix sort)</h2><img src="/images/bg-4.jpg" width="400" height="400" div align="center">
+
+<ul>
+<li>原理</li>
+</ul>
+<p>将所有待比较数值统一为同样的数位长度，数位较短的数前面补零。然后，从最低位开始，依次进行一次排序。这样从最低位排序一直到最高位排序完成以后, 数列就变成一个有序序列。</p>
+<ul>
+<li>Java源代码</li>
+</ul>
+<pre><code>private static void countSort(int[] a, int exp)
+{
+    int[] output = new int[a.length]; //储存已经排好序的临时数组
+    int[] buckets = new int[10];
+    //将数据出现的次数储存在buckets[]中
+    for(int i=0; i &lt; a.length; i++)
+    {
+        buckets[ (a[i]/exp)%10 ]++;
+    }
+    //更改buckets[i],使值为当前总共又多少个数据，用于排序
+    for(int i=1; i&lt;10; i++)
+    {
+        buckets[i] += buckets[i-1];
+    }
+    //将数据储存到临时数组output[]中
+    for(int i = a.length - 1; i&gt;=0; i--)
+    {
+        output[ buckets[ (a[i]/exp)%10 ] - 1 ] = a[i];
+        buckets[ (a[i]/exp)%10 ]--;
+    }
+    //将排好的数据赋值给a[]
+    for(int i=0; i &lt; a.length; i++)
+    {
+        a[i] = output[i];
+    }
+    output = null;
+    buckets = null;
+}
+
+public static void radixSort(int[] a)
+{
+    int exp; //指数，当对数组按个位进行排序时，exp=1; 按十位进行排序时，exp=10……
+    int max = getMax(a);  //数组a中的最大值
+    //从个位开始，对数组a按&quot;指数&quot;进行排序
+    for(exp = 1; (max/exp) &gt; 0; exp * = 10)
+    {
+        countSort(a, exp)
+    }
+}
+
+private static int getMax(int[] a)
+{
+    int max;
+    max = a[0];
+    for(int i=1; i &lt; a.length; i++)
+    {
+        if(a[i] &gt; max)
+        {
+            max = a[i];
+        }
+    }
+    return max;
+}</code></pre><p><a href="https://www.cnblogs.com/skywang12345/p/3603669.html" target="_blank" rel="noopener">这篇文章的基数排序讲的非常详细</a></p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
         
           
         
-      </div>
+        <div class="post-tags">
+          
+            <a href="/MichaelLiu1999.github.io/tags/算法分析/" rel="tag"># 算法分析</a>
+          
+        </div>
+      
+
       
       
       
-    </div>
-    
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/MichaelLiu1999.github.io/2019/06/13/sortingAlgorithm-2/" rel="next" title="排序算法分析-2">
+                <i class="fa fa-chevron-left"></i> 排序算法分析-2
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
 
 
-
-    
-    
-    
   </div>
 
 
@@ -480,8 +664,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -620,6 +813,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#排序算法分析-3"><span class="nav-number">1.</span> <span class="nav-text">排序算法分析-3</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基数排序-Radix-sort"><span class="nav-number">1.1.</span> <span class="nav-text">基数排序(Radix sort)</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       

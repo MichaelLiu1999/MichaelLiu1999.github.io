@@ -113,18 +113,20 @@
 
 
 
-  <meta name="description" content="排序算法分析-2堆排序 原理  堆是具有以下性质的完全二叉树：每个结点的值都大于或等于其左右孩子结点的值，称为大顶堆；或者每个结点的值都小于或等于其左右孩子结点的值，称为小顶堆。 这里的堆排序用到的是大顶堆  步骤  1.将无需序列构建成一个堆，根据升序降序需求选择大顶堆或小顶堆;2.将堆顶元素与末尾元素交换，将最大元素”沉”到数组末端;3.重新调整结构，使其满足堆定义，然后继续交换堆顶元素与当前">
+  <meta name="description" content="排序算法分析-2你要搞清楚自己人生的剧本，不是你父母的续集，不是你子女的前传，更不是你朋友的外篇。对待生命你不妨大胆一点，因为你好歹要失去它。如果这世界上真有奇迹，那只是努力的另一个名字。生命中最难的阶段不是没有人懂你，而是你不懂你自己。    堆排序 原理  堆是具有以下性质的完全二叉树：每个结点的值都大于或等于其左右孩子结点的值，称为大顶堆；或者每个结点的值都小于或等于其左右孩子结点的值，称为">
 <meta name="keywords" content="算法分析">
 <meta property="og:type" content="article">
 <meta property="og:title" content="排序算法分析-2">
 <meta property="og:url" content="https://MichaelLiu1999.github.io/2019/06/13/sortingAlgorithm-2/index.html">
 <meta property="og:site_name" content="想要上树的小猪">
-<meta property="og:description" content="排序算法分析-2堆排序 原理  堆是具有以下性质的完全二叉树：每个结点的值都大于或等于其左右孩子结点的值，称为大顶堆；或者每个结点的值都小于或等于其左右孩子结点的值，称为小顶堆。 这里的堆排序用到的是大顶堆  步骤  1.将无需序列构建成一个堆，根据升序降序需求选择大顶堆或小顶堆;2.将堆顶元素与末尾元素交换，将最大元素”沉”到数组末端;3.重新调整结构，使其满足堆定义，然后继续交换堆顶元素与当前">
+<meta property="og:description" content="排序算法分析-2你要搞清楚自己人生的剧本，不是你父母的续集，不是你子女的前传，更不是你朋友的外篇。对待生命你不妨大胆一点，因为你好歹要失去它。如果这世界上真有奇迹，那只是努力的另一个名字。生命中最难的阶段不是没有人懂你，而是你不懂你自己。    堆排序 原理  堆是具有以下性质的完全二叉树：每个结点的值都大于或等于其左右孩子结点的值，称为大顶堆；或者每个结点的值都小于或等于其左右孩子结点的值，称为">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-13T08:34:28.004Z">
+<meta property="og:image" content="https://michaelliu1999.github.io/images/bg-3.jpg">
+<meta property="og:updated_time" content="2019-06-13T14:05:42.700Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="排序算法分析-2">
-<meta name="twitter:description" content="排序算法分析-2堆排序 原理  堆是具有以下性质的完全二叉树：每个结点的值都大于或等于其左右孩子结点的值，称为大顶堆；或者每个结点的值都小于或等于其左右孩子结点的值，称为小顶堆。 这里的堆排序用到的是大顶堆  步骤  1.将无需序列构建成一个堆，根据升序降序需求选择大顶堆或小顶堆;2.将堆顶元素与末尾元素交换，将最大元素”沉”到数组末端;3.重新调整结构，使其满足堆定义，然后继续交换堆顶元素与当前">
+<meta name="twitter:description" content="排序算法分析-2你要搞清楚自己人生的剧本，不是你父母的续集，不是你子女的前传，更不是你朋友的外篇。对待生命你不妨大胆一点，因为你好歹要失去它。如果这世界上真有奇迹，那只是努力的另一个名字。生命中最难的阶段不是没有人懂你，而是你不懂你自己。    堆排序 原理  堆是具有以下性质的完全二叉树：每个结点的值都大于或等于其左右孩子结点的值，称为大顶堆；或者每个结点的值都小于或等于其左右孩子结点的值，称为">
+<meta name="twitter:image" content="https://michaelliu1999.github.io/images/bg-3.jpg">
 
 
 
@@ -445,7 +447,7 @@
                 
               
 
-              <time title="创建时间：2019-06-13 15:29:18 / 修改时间：16:34:28" itemprop="dateCreated datePublished" datetime="2019-06-13T15:29:18+08:00">2019-06-13</time>
+              <time title="创建时间：2019-06-13 15:29:18 / 修改时间：22:05:42" itemprop="dateCreated datePublished" datetime="2019-06-13T15:29:18+08:00">2019-06-13</time>
             
 
             
@@ -509,7 +511,11 @@
       
 
       
-        <h1 id="排序算法分析-2"><a href="#排序算法分析-2" class="headerlink" title="排序算法分析-2"></a>排序算法分析-2</h1><h2 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h2><ul>
+        <h1 id="排序算法分析-2"><a href="#排序算法分析-2" class="headerlink" title="排序算法分析-2"></a>排序算法分析-2</h1><p><strong><em>你要搞清楚自己人生的剧本，不是你父母的续集，不是你子女的前传，更不是你朋友的外篇。对待生命你不妨大胆一点，因为你好歹要失去它。如果这世界上真有奇迹，那只是努力的另一个名字。生命中最难的阶段不是没有人懂你，而是你不懂你自己。</em></strong></p>
+<img src="/images/bg-3.jpg" width="400" height="400" div align="center">
+
+
+<h2 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h2><ul>
 <li>原理</li>
 </ul>
 <p>堆是具有以下性质的完全二叉树：每个结点的值都大于或等于其左右孩子结点的值，称为大顶堆；或者每个结点的值都小于或等于其左右孩子结点的值，称为小顶堆。</p>
@@ -617,6 +623,10 @@ public static void swap(int[] arr, int a, int b)
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/MichaelLiu1999.github.io/2019/06/13/sortAlgorithm-3/" rel="prev" title="排序算法分析-3">
+                排序算法分析-3 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -686,7 +696,7 @@ public static void swap(int[] arr, int a, int b)
                 
                   <a href="/MichaelLiu1999.github.io/archives/">
                 
-                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-count">13</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
