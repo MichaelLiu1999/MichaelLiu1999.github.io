@@ -6,7 +6,7 @@
   <link href="/MichaelLiu1999.github.io/atom.xml" rel="self"/>
   
   <link href="https://MichaelLiu1999.github.io/"/>
-  <updated>2019-06-13T14:19:09.674Z</updated>
+  <updated>2019-06-17T13:13:16.960Z</updated>
   <id>https://MichaelLiu1999.github.io/</id>
   
   <author>
@@ -17,13 +17,40 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>图论的一些基本概念</title>
+    <link href="https://MichaelLiu1999.github.io/2019/06/17/graph/"/>
+    <id>https://MichaelLiu1999.github.io/2019/06/17/graph/</id>
+    <published>2019-06-17T11:28:52.000Z</published>
+    <updated>2019-06-17T13:13:16.960Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="图论基本概念"><a href="#图论基本概念" class="headerlink" title="图论基本概念"></a>图论基本概念</h1><h2 id="Graph"><a href="#Graph" class="headerlink" title="Graph"></a>Graph</h2><h3 id="Undirected-graph"><a href="#Undirected-graph" class="headerlink" title="Undirected graph"></a>Undirected graph</h3><ul><li><p>Definition<br>In a simple undirected graph, we have at most a single edge between any two vertices and no self loop(an edge from a vertex to itself). </p></li><li><p>Complete undirect graph<br>A graph with every pair of its vertices connected by an edge is called complete.</p></li><li><p>Degree<br>The degree of a vertex v, denoted by deg(v), is the number of eages incident with it(a loop contributes twice to the degree).</p><a id="more"></a></li><li><p>How to represent</p></li></ul><ol><li><p>Adjacency linkedList<br><img src="/images/graph-1.png" alt></p></li><li><p>Adjacency matrix<br><img src="/images/graph-2.png" alt></p></li></ol><h3 id="Directed-graph"><a href="#Directed-graph" class="headerlink" title="Directed graph"></a>Directed graph</h3><ul><li><p>Definition<br>If a pair of vertices(u, v) is not the same as the pair(v, u), the graph is called a directed graph(also called a digraph).</p></li><li><p>In-degree<br>The in-degree of a vertex v is the number of edges leading to the vertex v.</p></li><li><p>Out-degree<br>The out-degree of a vertex v is the number of edges leading away from vertex v.</p></li></ul><h3 id="Tree"><a href="#Tree" class="headerlink" title="Tree"></a>Tree</h3><ul><li><p>Definition<br>A tree is a connected graph with no cycles(acyclic).<br><img src="/images/graph-3.png" alt></p></li><li><p>Forest<br>A non connected graph with no cycles consists of serveral trees and is called a forest.</p></li><li><p>Edge<br>A tree with n vertices will always have exactly n-1 edges.</p></li><li><p>Traversing Binary Trees</p></li></ul><ol><li><p>Pre-order:</p><pre><code>visit root,visit left subtree(recursively),visit right subtree(recursively).</code></pre></li><li><p>In-order(#):</p><pre><code>left, root, right</code></pre></li><li><p>Post-order(#):</p><pre><code>left, right, root</code></pre></li></ol><p><img src="/images/graph-4.png" alt></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;图论基本概念&quot;&gt;&lt;a href=&quot;#图论基本概念&quot; class=&quot;headerlink&quot; title=&quot;图论基本概念&quot;&gt;&lt;/a&gt;图论基本概念&lt;/h1&gt;&lt;h2 id=&quot;Graph&quot;&gt;&lt;a href=&quot;#Graph&quot; class=&quot;headerlink&quot; title=&quot;Graph&quot;&gt;&lt;/a&gt;Graph&lt;/h2&gt;&lt;h3 id=&quot;Undirected-graph&quot;&gt;&lt;a href=&quot;#Undirected-graph&quot; class=&quot;headerlink&quot; title=&quot;Undirected graph&quot;&gt;&lt;/a&gt;Undirected graph&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Definition&lt;br&gt;In a simple undirected graph, we have at most a single edge between any two vertices and no self loop(an edge from a vertex to itself). &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Complete undirect graph&lt;br&gt;A graph with every pair of its vertices connected by an edge is called complete.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Degree&lt;br&gt;The degree of a vertex v, denoted by deg(v), is the number of eages incident with it(a loop contributes twice to the degree).&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="major" scheme="https://MichaelLiu1999.github.io/categories/major/"/>
+    
+    
+      <category term="算法分析" scheme="https://MichaelLiu1999.github.io/tags/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90/"/>
+    
+  </entry>
+  
+  <entry>
     <title>排序算法分析-3</title>
     <link href="https://MichaelLiu1999.github.io/2019/06/13/sortAlgorithm-3/"/>
     <id>https://MichaelLiu1999.github.io/2019/06/13/sortAlgorithm-3/</id>
     <published>2019-06-13T09:43:21.000Z</published>
-    <updated>2019-06-13T14:19:09.674Z</updated>
+    <updated>2019-06-15T05:15:02.397Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="排序算法分析-3"><a href="#排序算法分析-3" class="headerlink" title="排序算法分析-3"></a>排序算法分析-3</h1><h2 id="基数排序-Radix-sort"><a href="#基数排序-Radix-sort" class="headerlink" title="基数排序(Radix sort)"></a>基数排序(Radix sort)</h2><img src="/images/bg-4.jpg" width="400" height="400" div align="center"><ul><li>原理</li></ul><p>将所有待比较数值统一为同样的数位长度，数位较短的数前面补零。然后，从最低位开始，依次进行一次排序。这样从最低位排序一直到最高位排序完成以后, 数列就变成一个有序序列。</p><a id="more"></a><ul><li>Java源代码</li></ul><pre><code>private static void countSort(int[] a, int exp){    int[] output = new int[a.length]; //储存已经排好序的临时数组    int[] buckets = new int[10];    //将数据出现的次数储存在buckets[]中    for(int i=0; i &lt; a.length; i++)    {        buckets[ (a[i]/exp)%10 ]++;    }    //更改buckets[i],使值为当前总共又多少个数据，用于排序    for(int i=1; i&lt;10; i++)    {        buckets[i] += buckets[i-1];    }    //将数据储存到临时数组output[]中    for(int i = a.length - 1; i&gt;=0; i--)    {        output[ buckets[ (a[i]/exp)%10 ] - 1 ] = a[i];        buckets[ (a[i]/exp)%10 ]--;    }    //将排好的数据赋值给a[]    for(int i=0; i &lt; a.length; i++)    {        a[i] = output[i];    }    output = null;    buckets = null;}public static void radixSort(int[] a){    int exp; //指数，当对数组按个位进行排序时，exp=1; 按十位进行排序时，exp=10……    int max = getMax(a);  //数组a中的最大值    //从个位开始，对数组a按&quot;指数&quot;进行排序    for(exp = 1; (max/exp) &gt; 0; exp * = 10)    {        countSort(a, exp)    }}private static int getMax(int[] a){    int max;    max = a[0];    for(int i=1; i &lt; a.length; i++)    {        if(a[i] &gt; max)        {            max = a[i];        }    }    return max;}</code></pre><ul><li>算法分析</li></ul><p>时间复杂度:O(n)<br>空间复杂度:O(n)</p><p><a href="https://www.cnblogs.com/skywang12345/p/3603669.html" target="_blank" rel="noopener">这篇文章的基数排序讲的非常详细</a></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="排序算法分析-3"><a href="#排序算法分析-3" class="headerlink" title="排序算法分析-3"></a>排序算法分析-3</h1><h2 id="基数排序-Radix-sort"><a href="#基数排序-Radix-sort" class="headerlink" title="基数排序(Radix sort)"></a>基数排序(Radix sort)</h2><img src="/images/bg-4.jpg" width="400" height="400" div align="center"><ul><li>原理</li></ul><p>将所有待比较数值统一为同样的数位长度，数位较短的数前面补零。然后，从最低位开始，依次进行一次排序。这样从最低位排序一直到最高位排序完成以后, 数列就变成一个有序序列。</p><a id="more"></a><ul><li>Java源代码</li></ul><pre><code>private static void countSort(int[] a, int exp){    int[] output = new int[a.length]; //储存已经排好序的临时数组    int[] buckets = new int[10];    //将数据出现的次数储存在buckets[]中    for(int i=0; i &lt; a.length; i++)    {        buckets[ (a[i]/exp)%10 ]++;    }    //更改buckets[i],使值为当前总共有多少个数据，用于排序    for(int i=1; i&lt;10; i++)    {        buckets[i] += buckets[i-1];    }    //将数据储存到临时数组output[]中    for(int i = a.length - 1; i&gt;=0; i--)    {        output[ buckets[ (a[i]/exp)%10 ] - 1 ] = a[i];        buckets[ (a[i]/exp)%10 ]--;    }    //将排好的数据赋值给a[]    for(int i=0; i &lt; a.length; i++)    {        a[i] = output[i];    }    output = null;    buckets = null;}public static void radixSort(int[] a){    int exp; //指数，当对数组按个位进行排序时，exp=1; 按十位进行排序时，exp=10……    int max = getMax(a);  //数组a中的最大值    //从个位开始，对数组a按&quot;指数&quot;进行排序    for(exp = 1; (max/exp) &gt; 0; exp * = 10)    {        countSort(a, exp)    }}private static int getMax(int[] a){    int max;    max = a[0];    for(int i=1; i &lt; a.length; i++)    {        if(a[i] &gt; max)        {            max = a[i];        }    }    return max;}</code></pre><ul><li>算法分析</li></ul><p>时间复杂度:O(n)<br>空间复杂度:O(n)</p><p><a href="https://www.cnblogs.com/skywang12345/p/3603669.html" target="_blank" rel="noopener">这篇文章的基数排序讲的非常详细</a></p>]]></content>
     
     <summary type="html">
     
@@ -48,9 +75,9 @@
     <link href="https://MichaelLiu1999.github.io/2019/06/13/sortingAlgorithm-2/"/>
     <id>https://MichaelLiu1999.github.io/2019/06/13/sortingAlgorithm-2/</id>
     <published>2019-06-13T07:29:18.000Z</published>
-    <updated>2019-06-13T14:05:42.700Z</updated>
+    <updated>2019-06-15T05:26:36.260Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="排序算法分析-2"><a href="#排序算法分析-2" class="headerlink" title="排序算法分析-2"></a>排序算法分析-2</h1><p><strong><em>你要搞清楚自己人生的剧本，不是你父母的续集，不是你子女的前传，更不是你朋友的外篇。对待生命你不妨大胆一点，因为你好歹要失去它。如果这世界上真有奇迹，那只是努力的另一个名字。生命中最难的阶段不是没有人懂你，而是你不懂你自己。</em></strong></p><img src="/images/bg-3.jpg" width="400" height="400" div align="center"><h2 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h2><ul><li>原理</li></ul><p>堆是具有以下性质的完全二叉树：每个结点的值都大于或等于其左右孩子结点的值，称为大顶堆；或者每个结点的值都小于或等于其左右孩子结点的值，称为小顶堆。</p><p>这里的堆排序用到的是大顶堆</p><ul><li>步骤</li></ul><p>1.将无需序列构建成一个堆，根据升序降序需求选择大顶堆或小顶堆;<br>2.将堆顶元素与末尾元素交换，将最大元素”沉”到数组末端;<br>3.重新调整结构，使其满足堆定义，然后继续交换堆顶元素与当前末尾元素，反复执行调整+交换步骤，直到整个序列有序。</p><a id="more"></a><ul><li>Java源码实现</li></ul><pre><code>public static void sort(int[] arr){    //构建大顶堆    for(int i = arr.length/2-1; i&gt;=0; i++)    {        //从最后一个非叶节点之下而上，从右至左开始调整        adjustHeap(arr, i, arr.length);    }    //调整堆结构+交换堆顶元素和末尾元素    for(int j = arr.length-1; j&gt;0; j--)    {        swap(arr, 0, j);        adjustHeap(arr, 0, j);    }}//调整大顶堆public static void adjustHeap(int[] arr, int i; int length){    int temp = arr[i];//先取出当前元素i    for(int k = 2*i+1; k &lt; length; k = k*2+1) //从i的左子节点开始    {        if( (k+1) &lt; length &amp;&amp; arr[k] &lt; arr[k+1] ) //如果左子节点小于右子节点，把k指向右子节点        {            k++;        }        if(temp &lt; arr[k]) //如果父节点小于子节点        {            arr[i] = arr[k];            i = k;        }else        {            break;        }    }    arr[i] = temp;}//交换值public static void swap(int[] arr, int a, int b){    int temp = arr[a];    arr[a] = arr[b];    arr[b] = temp;}</code></pre><ul><li>动画</li></ul><iframe src="/images/heapSort.gif"></iframe>]]></content>
+    <content type="html"><![CDATA[<h1 id="排序算法分析-2"><a href="#排序算法分析-2" class="headerlink" title="排序算法分析-2"></a>排序算法分析-2</h1><p><strong><em>你要搞清楚自己人生的剧本，不是你父母的续集，不是你子女的前传，更不是你朋友的外篇。对待生命你不妨大胆一点，因为你好歹要失去它。如果这世界上真有奇迹，那只是努力的另一个名字。生命中最难的阶段不是没有人懂你，而是你不懂你自己。</em></strong></p><img src="/images/bg-3.jpg" width="400" height="400" div align="center"><h2 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h2><ul><li>原理</li></ul><p>堆是具有以下性质的完全二叉树：每个结点的值都大于或等于其左右孩子结点的值，称为大顶堆；或者每个结点的值都小于或等于其左右孩子结点的值，称为小顶堆。</p><p>这里的堆排序用到的是大顶堆</p><ul><li>步骤</li></ul><p>1.将无需序列构建成一个堆，根据升序降序需求选择大顶堆或小顶堆;<br>2.将堆顶元素与末尾元素交换，将最大元素”沉”到数组末端;<br>3.重新调整结构，使其满足堆定义，然后继续交换堆顶元素与当前末尾元素，反复执行调整+交换步骤，直到整个序列有序。</p><a id="more"></a><ul><li>Java源码实现</li></ul><pre><code>public static void sort(int[] arr){    //构建大顶堆    for(int i = arr.length/2-1; i&gt;=0; i++)    {        //从最后一个非叶节点自下而上，从右至左开始调整        adjustHeap(arr, i, arr.length);    }    //调整堆结构+交换堆顶元素和末尾元素    for(int j = arr.length-1; j&gt;0; j--)    {        swap(arr, 0, j);        adjustHeap(arr, 0, j);    }}//调整大顶堆public static void adjustHeap(int[] arr, int i; int length){    int temp = arr[i];//先取出当前元素i    for(int k = 2*i+1; k &lt; length; k = k*2+1) //从i的左子节点开始    {        if( (k+1) &lt; length &amp;&amp; arr[k] &lt; arr[k+1] ) //如果左子节点小于右子节点，把k指向右子节点        {            k++;        }        if(temp &lt; arr[k]) //如果父节点小于子节点        {            arr[i] = arr[k];            i = k;        }else        {            break;        }    }    arr[i] = temp;}//交换值public static void swap(int[] arr, int a, int b){    int temp = arr[a];    arr[a] = arr[b];    arr[b] = temp;}</code></pre><ul><li>动画</li></ul><iframe src="/images/heapSort.gif"></iframe>]]></content>
     
     <summary type="html">
     
